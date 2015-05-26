@@ -44,10 +44,20 @@ gulp.task('sass', function() {
 			outputStyle : 'compressed'
 		}));
 
-	var css = gulp.src('src/**/*.css');
+	var css = gulp.src('src/css/**/*.css');
 
 	return es.merge(cssFromSass, css)
 	.pipe(concat('main.css'))
+	.pipe(gulp.dest(outputDir + '/css'))
+	.pipe(connect.reload());
+});
+
+gulp.task('scss', function() {
+	return gulp.src('src/scss/**/*.scss')
+	.pipe(sass({
+			indentedSyntax : false,
+			outputStyle : 'compressed'
+		}))
 	.pipe(gulp.dest(outputDir + '/css'))
 	.pipe(connect.reload());
 });
@@ -56,6 +66,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/templates/**/*.jade', ['jade']);
 	gulp.watch('src/js/**/*.{js,coffee}', ['js']);
 	gulp.watch('src/sass/**/*.{sass,scss}', ['sass']);
+	gulp.watch('src/scss/**/*.scss', ['scss']);
 })
 
 gulp.task('connect', function() {
@@ -67,4 +78,4 @@ gulp.task('connect', function() {
 
 
 
-gulp.task('default', ['js', 'jade', 'sass', 'watch', 'connect']);
+gulp.task('default', ['js', 'jade', 'sass', 'scss', 'watch', 'connect']);
