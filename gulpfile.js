@@ -12,7 +12,7 @@ var outputDir = 'builds/development';
 
 gulp.task('js', function () {
 	var javaScriptFromCoffeeScript = gulp.src('src/js/**/*.coffee')
-	  .pipe(coffee());
+		.pipe(coffee());
 
 	var js = gulp.src('src/js/**/*.js');
 
@@ -38,11 +38,16 @@ gulp.task('jade', function() {
 // });
 
 gulp.task('sass', function() {
-	return gulp.src('src/sass/main.sass')
-	.pipe(sass({
-		indentedSyntax : true,
-		outputStyle : 'compressed'
-	}))
+	var cssFromSass = gulp.src('src/sass/main.sass')
+		.pipe(sass({
+			indentedSyntax : true,
+			outputStyle : 'compressed'
+		}));
+
+	var css = gulp.src('src/**/*.css');
+
+	return es.merge(cssFromSass, css)
+	.pipe(concat('main.css'))
 	.pipe(gulp.dest(outputDir + '/css'))
 	.pipe(connect.reload());
 });

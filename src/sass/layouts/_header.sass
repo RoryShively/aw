@@ -35,18 +35,31 @@ header
 	// z-index: 30
 	// top: 0
 	// right: 0
-	float: right
+	margin: 30vh auto
 	vertical-align: middle
 	// height: 400px
 	width: 400px
 
 	@media only screen and (max-width: 500px)
-		height: 80%
-		width: 80%
+		width: 80vw
+	
 
 	img
 		height: 100%
 		width: 100%
+
+	li
+		font-size: 1.5em
+		text-align: center
+		color: white
+
+	a
+		color: $lightblack
+
+		&:hover
+			color: white
+			text-decoration: none
+
 
 .social-media_header
 	// position:absolute
@@ -84,3 +97,9 @@ header
 	height: 100%
 	width: 100%
 	background-color: black
+
+body
+	overflow: hidden
+
+.section
+	height: 100vh
