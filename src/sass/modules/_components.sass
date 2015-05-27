@@ -1,16 +1,16 @@
 // MENU SASS
 
 .cbp-spmenu
-	background: #47a3da
+	background: $navbasecolor
 	position: fixed
 
 	h3
-		color: #afdefa
+		color: ($navbasecolor + #683b20)
 		font-size: 1.9em
 		padding: 20px
 		margin: 0
 		font-weight: 300
-		background: #0d77b6
+		background: ($navbasecolor - #3a2c24)
 
 	a
 		display: block
@@ -19,12 +19,11 @@
 		font-weight: 300
 
 		&:hover
-			background: #258ecd
+			background: ($navbasecolor - #22150d)
 
 		&:active
-			background: #afdefa
-			color: #47a3da
-
+			background: ($navbasecolor + #683b20)
+			color: $navbasecolor
 .cbp-spmenu-vertical
 	width: 240px
 	height: 100%
@@ -32,7 +31,7 @@
 	z-index: 1000
 
 	a
-		border-bottom: 1px solid #258ecd
+		border-bottom: 1px solid ($navbasecolor - #22150d)
 		padding: 1em
 
 .cbp-spmenu-left
