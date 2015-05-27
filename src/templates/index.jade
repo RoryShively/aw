@@ -15,11 +15,35 @@ html
 		script(src="js/jquery.onepage-scroll.js")
 		
 	body.cbp-spmenu-push
+
+		//- START NAV
+
 		nav.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-left(id="cbp-spmenu-s1")
 			h3 Menu
 			a(href="#") Watch Pilot
 			a(href="#") Behind the Scenes
 			a(href="#") Cast &amp; Crew
+			button(id="showLeftPush") 
+				.hamburglar.is-closed(id="hamburger")
+					.burger-icon
+						.burger-container
+							span.burger-bun-top
+							span.burger-filling
+							span.burger-bun-bot
+					//- svg ring containter
+					.burger-ring
+						svg.svg-ring
+							path.path(fill="none", stroke="#fff", stroke-miterlimit="10", stroke-width="4", d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2")
+						//- the masked path that animates the fill to the ring
+					svg(width="0", height="0")
+						mask(id="mask")
+							path(xmlns="http://www.w3.org/2000/svg", fill="none", stroke="#ff0000", stroke-miterlimit="10", stroke-width="4", d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4")
+					.path-burger
+						.animate-path
+							.path-rotation
+
+		//- END NAV
+
 		.main.onepage-wrapper
 			section.section.splash1
 				.logo
@@ -32,25 +56,7 @@ html
 						li
 							a(href="#", data-selector="li3") Cast &amp; Crew
 			section.section.splash2
-				button(id="showLeftPush") 
-					.hamburglar.is-closed(id="hamburger")
-						.burger-icon
-							.burger-container
-								span.burger-bun-top
-								span.burger-filling
-								span.burger-bun-bot
-						//- svg ring containter
-						.burger-ring
-							svg.svg-ring
-								path.path(fill="none", stroke="#fff", stroke-miterlimit="10", stroke-width="4", d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2")
-							//- the masked path that animates the fill to the ring
-						svg(width="0", height="0")
-							mask(id="mask")
-								path(xmlns="http://www.w3.org/2000/svg", fill="none", stroke="#ff0000", stroke-miterlimit="10", stroke-width="4", d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4")
-						.path-burger
-							.animate-path
-								.path-rotation
-
+				
 			section.section.splash3
 				
 			section.section.splash4
