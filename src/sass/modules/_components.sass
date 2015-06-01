@@ -5,12 +5,12 @@
 	position: fixed
 
 	h3
-		color: ($navbasecolor + #683b20)
+		color: ($navbasecolor + $navtitlemod)
 		font-size: 1.9em
 		padding: 20px
 		margin: 0
 		font-weight: 300
-		background: ($navbasecolor - #3a2c24)
+		background: ($navbasecolor - $navheadermod)
 
 	a
 		display: block
@@ -19,10 +19,10 @@
 		font-weight: 300
 
 		&:hover
-			background: ($navbasecolor - #22150d)
+			background: ($navbasecolor - $navsecondarymod)
 
 		&:active
-			background: ($navbasecolor + #683b20)
+			background: ($navbasecolor + $navtitlemod)
 			color: $navbasecolor
 			
 .cbp-spmenu-vertical
@@ -32,7 +32,7 @@
 	z-index: 1000
 
 	a
-		border-bottom: 1px solid ($navbasecolor - #22150d)
+		border-bottom: 1px solid ($navbasecolor - $navsecondarymod)
 		padding: 1em
 
 .cbp-spmenu-left

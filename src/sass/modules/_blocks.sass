@@ -16,9 +16,10 @@
 	background-color: lavender
 	height: 100%
 
-.crewDescription
+.crewLabel
 	position: absolute
 	background-color: rgba(255,255,255, 0.3)
+	font-family: lato
 	bottom: 0
 	height: 40%
 	width: 100%
@@ -26,7 +27,6 @@
 
 .crewName
 	font-size: .8em
-	font-family: lato
 	font-weight: 600
 	border-bottom: rgba(0,0,0,0.6) 2px dotted
 
@@ -43,3 +43,76 @@
 	bottom: 0
 	right: 0
 	z-index: 20
+
+// ARTICLE BLOCK SASS
+
+.article
+	background-color: ($splash3bgcolor - #111)
+	height: 400px
+	width: 350px
+	text-align: center
+	margin: 0 10px
+	font-size: 3em
+
+.articleLabel
+	position: absolute
+	background-color: rgba(255,255,255, 0.6)
+	bottom: 0
+	height: 40%
+	width: 100%
+	font-family: lato
+	color: $lightblack
+	z-index: 10
+
+.articleTitle
+	line-height: 1em
+	position: absolute
+	display: inline-block
+	font-size: 0.55em
+	left: $artlabelpadding
+
+.articleDate
+	font-size: .4em
+	display: inline-block
+	line-height: 1em
+	position: absolute
+	top: $artlabelpadding
+	right: $artlabelpadding
+
+.articleDescription
+	font-size: .3em
+	padding: 2.5em 2em
+	text-align: left
+
+.articleBtn
+	position: absolute
+	right: $artlabelpadding
+	bottom: $artlabelpadding
+
+// MODAL BLOCK SASS
+
+.close
+	position: absolute
+
+.modal-content
+	background-color: ($modalbgcolor - $modalheadermod)
+	color: white
+
+.modal-body
+	background-color: $modalbgcolor
+	font-weight: 300
+	font-family: lato
+	text-indent: 24px
+
+.modal-title
+	padding-bottom: 0px
+	color: ($navbasecolor + $modaltitlemod)
+
+.modalWrapper
+	text-align: center
+	height: 200px
+	overflow: hidden
+
+	img
+		width: 100%
+		margin-top: -30%

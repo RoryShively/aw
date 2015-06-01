@@ -14,14 +14,18 @@ h2
 		padding: 0.4em 0
 
 .header
-	margin-bottom: 10px
+	margin-bottom: 10vh
+
+	@media only screen and (max-width: 600px)
+		margin-bottom: 5vh
 
 .containingBlock
-	width: 55%
-	margin: 0 auto
+	width: 65%
+	margin-right: 20px
+	float: left
 
-	h4
-		text-align: center
+	@media only screen and (max-width: 1260px)
+		width: 60%
 
 	@media only screen and (max-width: 600px)
 		width: 100%
@@ -33,11 +37,23 @@ h2
 		background-color: ($splash2bgcolor - #111)
 		height: 5.55em
 
+.splash2container
+	width: 80%
+	margin: 0 auto
+
 .videoWrapper
 	position: relative
 	padding-bottom: 56.25%
 	padding-top: 25px
 	height: 0
+
+.videoDescription
+	width: 33%
+	float: right
+
+	@media only screen and (max-width: 600px)
+		width: 100%
+		float: none
 
 iframe
 	position: absolute
@@ -47,7 +63,21 @@ iframe
 
 h4
 	text-align: center
+	font-size: 2em
+	padding-bottom: 20px
+
+	@media only screen and (max-width: 600px)
+		font-size: 1.7em
+		padding-bottom: 5px
+
+p
+	font-family: lato
 	font-size: 1.3em
+	font-weight: 300
+
+	@media only screen and (max-width: 600px)
+		font-size: 1em
+		
 
 .splash3
 	background-color: $splash3bgcolor
@@ -56,14 +86,6 @@ h4
 	.header 
 		background-color: ($splash3bgcolor - #111)
 		height: 5.55em
-
-.article
-	background-color: ($splash3bgcolor - #111)
-	height: 400px
-	width: 350px
-	text-align: center
-	margin: 0 10px
-	font-size: 3em
 
 .splash4
 	background-color: $splash4bgcolor

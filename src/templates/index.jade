@@ -14,7 +14,7 @@ html
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
 		script(src="js/all.min.js")
 		script(src="js/nav.js")
-		script(src="js/jquery.onepage-scroll.js")
+		//- script(src="js/jquery.onepage-scroll.js")
 		
 	body.cbp-spmenu-push
 
@@ -63,17 +63,26 @@ html
 			section.section.splash2
 				.header
 					h2 Watch Pilot
-				.containingBlock
-					.videoWrapper
-						iframe(width="100%", height="100%", src="https://www.youtube.com/embed/gxHtmRwez1E", frameborder="0", allowfullscreen)
-					h4 S01E01: Pilot
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat nobis, voluptatibus adipisci sint commodi! Consequuntur necessitatibus mollitia vel iste quae! Veritatis temporibus soluta numquam odit molestiae quibusdam, officia saepe ipsam.
+				.splash2container
+					.containingBlock
+						.videoWrapper
+							iframe(width="100%", height="100%", src="https://www.youtube.com/embed/gxHtmRwez1E", frameborder="0", allowfullscreen)
+					.videoDescription
+						h4 S01E01: Pilot
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id numquam quas voluptates vitae, quo tenetur perferendis quidem voluptatibus deleniti dicta. Ratione veritatis nesciunt dolorum ut dicta labore aut soluta blanditiis!
+						p Saepe officiis qui, hic suscipit, consectetur odit. Earum quis maiores blanditiis molestiae fugiat. Placeat, vitae, fuga. Quasi minima in ut quia labore, quae cum. Fuga sunt doloremque, quod culpa accusamus?
 			section.section.splash3
 				.header
 					h2 Behind the Scenes
 				.main-gallery.js-flickity(data-flickity-options='{ "cellAllign": "center", "contain": true }')
-					.gallery-cell.article 1
-						button.btn.btn-primary-btn-lg(type="button", data-toggle="modal", data-target="#myModal")
+					.gallery-cell.article
+						.articlePhoto
+							img(src="img/rehersal.jpg")
+						.articleLabel
+							.articleTitle Rehersals
+							.articleDate 5/31/2015
+							.articleDescription  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi rerum qui sint reprehenderit quidem sed repudiandae accusantium accusamus totam, veritatis sapiente tempore officiis cupiditate explicabo quia est nobis exercitationem eligendi!
+							button.btn.btn-primary-btn-lg.articleBtn(type="button", data-toggle="modal", data-target="#myModal") Read More...
 					.gallery-cell.article 2
 					.gallery-cell.article 3
 			section.section.splash4
@@ -83,7 +92,7 @@ html
 					.gallery-cell.crew
 						.crewPhoto
 							img(src="img/angela-full.jpg")
-						.crewDescription
+						.crewLabel
 							.crewName Angela Marie
 							.crewJob Producer
 							.crewJob Actress
@@ -91,7 +100,7 @@ html
 					.gallery-cell.crew
 						.crewPhoto
 							img(src="img/stephanie-full.jpg")
-						.crewDescription
+						.crewLabel
 							.crewName Stephanie
 							.crewJob Producer
 							.crewJob Actress
@@ -99,28 +108,28 @@ html
 					.gallery-cell.crew
 						.crewPhoto
 							img(src="img/eric-full.jpg")
-						.crewDescription
+						.crewLabel
 							.crewName Angela Marie
 							.crewJob Actor
 						.crewIMBD IMBD &#9656;
 					.gallery-cell.crew
 						.crewPhoto
 							img(src="img/micheal-full.jpg")
-						.crewDescription
+						.crewLabel
 							.crewName Angela Marie
 							.crewJob Actor
 						.crewIMBD IMBD &#9656;
 					.gallery-cell.crew
 						.crewPhoto
 							img(src="img/cliff-full.jpg")
-						.crewDescription
+						.crewLabel
 							.crewName Angela Marie
 							.crewJob Actor
 						.crewIMBD IMBD &#9656;
 					.gallery-cell.crew
 						.crewPhoto
 							img(src="img/will-full.jpg")
-						.crewDescription
+						.crewLabel
 							.crewName Angela Marie
 							.crewJob Actor
 						.crewIMBD IMBD &#9656;
@@ -133,28 +142,38 @@ html
 				.modal-content
 					.modal-header
 						button.close(type="button", data-dismiss="modal", aria-label="Close") <span aria-hidden="true">&times;</span>
-						h4.modal-title(id="myModalLabel") Modal title
+						h4.modal-title(id="myModalLabel") Rehersals
+						.modalWrapper
+							img(src="img/rehersal.jpg")
 					.modal-body
 						div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi totam nam veniam possimus ea quibusdam accusamus voluptates, rerum quo nihil eveniet ad atque voluptate commodi repellendus ex harum molestiae fugiat.
+						</br>
 						div Numquam aperiam culpa perspiciatis animi assumenda voluptas, perferendis officiis iure, ad quaerat excepturi saepe praesentium vel, tenetur deserunt? Accusamus eligendi, fugiat expedita quis laudantium veritatis dolorum nostrum sit cum dolores.
+						</br>
 						div Qui sed, quibusdam consequatur rerum, debitis, magnam reiciendis sequi quaerat, aliquid praesentium ullam at quos commodi autem distinctio voluptatibus nostrum aspernatur totam dolore? Rem id, veritatis excepturi libero nihil fugiat.
+						</br>
 						div Impedit culpa veniam ab vel explicabo odit at, rem adipisci sapiente voluptates dolorum deserunt est corrupti nisi laudantium placeat magni doloribus quidem quasi delectus unde ex eos natus, amet. Architecto.
+						</br>
 						div Odit sint corporis quam sed eos aspernatur, et nam laborum molestias veniam! Minus, atque. Sapiente, placeat ab labore quidem vitae! Aliquid eius earum ad cupiditate nulla iusto sunt ipsa atque.
+						</br>
 						div A totam quia repellat voluptas velit quod similique rerum aliquid in, deleniti consequatur nihil eos temporibus nulla aperiam? Doloremque provident recusandae, accusamus quae quidem totam dolorem in ab eos consequuntur.
+						</br>
 						div Earum fugiat sed, ipsum sint error saepe nesciunt omnis minus deserunt mollitia, labore amet quo, delectus commodi necessitatibus iure sunt neque culpa doloremque perspiciatis soluta? Cumque reprehenderit ea ad, non.
+						</br>
 						div Maxime modi ipsam tenetur fugit commodi consequatur sunt nulla labore, repellendus laudantium autem facere consectetur blanditiis recusandae excepturi, ex in optio unde minima expedita asperiores sint obcaecati dignissimos fugiat. A.
+						</br>
 						div Explicabo assumenda consequuntur esse, quidem suscipit aspernatur ipsum harum. Dolores modi soluta optio eveniet maxime veniam reprehenderit, aut esse. Quibusdam sit rerum in eaque delectus, doloremque voluptatem consequatur sed incidunt?
+						</br>
 						div Debitis quaerat mollitia cupiditate pariatur ducimus non alias quam aliquid aspernatur, eaque distinctio, odio ea molestias culpa libero maxime itaque deleniti eos, quos beatae atque aperiam doloribus reprehenderit. Rem, consectetur!
+						</br>
 						div Fugit nulla repellendus deleniti iusto totam ut at, dolor esse minus expedita, reiciendis ullam facere quisquam odio dolores voluptates dolorem. Commodi quos obcaecati laborum ea, omnis esse quae pariatur, amet.
+						</br>
 						div Molestiae corporis ipsam, in ut harum vitae facilis voluptates eveniet, nam dignissimos reprehenderit praesentium repudiandae aliquam facere beatae incidunt sed itaque commodi voluptas animi perspiciatis placeat. Inventore iure ducimus, earum.
+						</br>
 						div Sapiente totam iure vel facere sunt libero voluptates, alias nihil tempora placeat, dolor vitae aut nobis magnam, quos illum ex saepe nesciunt, provident obcaecati ratione laudantium sint officiis vero. Ut.
+						</br>
 						div Consectetur necessitatibus at eligendi illo a obcaecati, vel porro sapiente iure. Voluptates doloremque, recusandae qui ipsa sapiente voluptatum harum deleniti voluptas vero excepturi. Omnis fuga reprehenderit, fugit aspernatur ea distinctio?
-						div Iure, laboriosam eveniet mollitia eius sequi nulla in assumenda asperiores adipisci modi sunt quod suscipit. Sequi ex veniam mollitia nostrum ducimus praesentium dolorum commodi animi quam illo, est cum repudiandae.
-						div Ut, fugit, vero. Non a, hic, iusto error adipisci mollitia impedit quaerat quod nemo odit dolore totam eos perspiciatis rem asperiores fugiat cum ducimus cupiditate. Laborum accusamus laboriosam nostrum consectetur.
-						div Ab aliquam adipisci voluptates libero earum aspernatur veniam voluptas officia molestias a est dolore veritatis deserunt optio quod ad doloremque nemo, accusantium corrupti pariatur asperiores tempore perspiciatis alias. Iusto, odio.
-						div Fugiat veritatis asperiores voluptate distinctio a id mollitia, iste vel cupiditate neque sunt, est praesentium dolorum. Quisquam assumenda consequatur, iure aperiam repellat, labore voluptate architecto accusamus laborum officia aut maiores.
-						div Quam velit, facere eius saepe pariatur a eum animi similique impedit nostrum ratione porro, quibusdam assumenda nisi necessitatibus quas neque quo perspiciatis nihil commodi exercitationem tempore. Non nulla autem odit.
-						div Perspiciatis recusandae corrupti labore culpa consequatur tempore, excepturi, ex voluptate ducimus numquam alias, perferendis repellat repellendus distinctio veritatis, magni. Vitae, nesciunt impedit voluptas odit non alias quia. Corporis, deserunt, rerum.
+						</br>
 					.modal-footer
 						button.btn.btn-default(type="button", data-dismiss="modal") Close
 
