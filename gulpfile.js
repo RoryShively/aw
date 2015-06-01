@@ -66,6 +66,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/templates/**/*.jade', ['jade']);
 	gulp.watch('src/js/**/*.{js,coffee}', ['js']);
 	gulp.watch('src/sass/**/*.{sass,scss}', ['sass']);
+	gulp.watch('src/css/**/*.css', ['sass']);
 	gulp.watch('src/scss/**/*.scss', ['scss']);
 })
 

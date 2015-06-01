@@ -1,24 +1,45 @@
-.section-container
-	margin: 3vh auto
-	height: 80vh
-	width: 80vw
+// CREW BLOCK SASS
 
 .crew
-	height: 75vh
-	width: 400px
-	margin: 0 20px
 	background-color: ($splash4bgcolor - #111)
-
-	font-size: 8em
+	height: 400px
+	width: 250px
 	text-align: center
-	font-family: $splashheader
+	margin: 0 10px
+	font-size: 3em
 
-.article
-	height: 75vh
-	width: 400px
-	margin: 0 20px
-	background-color: ($splash3bgcolor - #111)
+.splash4
+	.main-gallery
+		background-color: ($splash4bgcolor - #111)
 
-	font-size: 8em
-	text-align: center
-	font-family: $splashheader
+.crewPhoto
+	background-color: lavender
+	height: 100%
+
+.crewDescription
+	position: absolute
+	background-color: rgba(255,255,255, 0.3)
+	bottom: 0
+	height: 40%
+	width: 100%
+	z-index: 10
+
+.crewName
+	font-size: .8em
+	font-family: lato
+	font-weight: 600
+	border-bottom: rgba(0,0,0,0.6) 2px dotted
+
+.crewJob
+	font-size: .7em
+	font-style: italic
+
+.crewIMBD
+	position: absolute
+	background-color: rgba(255,255,255, 0.5)
+	font-family: serif
+	font-size: .4em
+	padding: 0 .4em
+	bottom: 0
+	right: 0
+	z-index: 20
