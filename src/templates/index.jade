@@ -58,7 +58,7 @@ html
 					//- svg ring containter
 					.burger-ring
 						svg.svg-ring
-							path.path(fill="none", stroke="#fff", stroke-miterlimit="10", stroke-width="4", d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2")
+							path.path(fill="none", stroke="#111", stroke-miterlimit="10", stroke-width="4", d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2")
 						//- the masked path that animates the fill to the ring
 					svg(width="0", height="0")
 						mask(id="mask")
@@ -84,7 +84,7 @@ html
 							a(href="#", data-selector="li3") Social Media
 			section.section.splash2
 				.header
-					h2 Watch Pilot
+					h2 - Watch Pilot -
 				.splash2container
 					.containingBlock
 						.videoWrapper
@@ -95,21 +95,21 @@ html
 						p Saepe officiis qui, hic suscipit, consectetur odit. Earum quis maiores blanditiis molestiae fugiat. Placeat, vitae, fuga. Quasi minima in ut quia labore, quae cum. Fuga sunt doloremque, quod culpa accusamus?
 			section.section.splash3
 				.header
-					h2 Behind the Scenes
+					h2 - Behind the Scenes -
 				.main-gallery.js-flickity(data-flickity-options='{ "cellAllign": "center", "contain": true }')
 					.gallery-cell.article
 						.articlePhoto
 							img(src="img/rehersal.jpg")
 						.articleLabel
 							.articleTitle Rehersals
-							.articleDate 5/31/2015
+							.articleDate.italic 5/31/2015
 							.articleDescription  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi rerum qui sint reprehenderit quidem sed repudiandae accusantium accusamus totam, veritatis sapiente tempore officiis cupiditate explicabo quia est nobis exercitationem eligendi!
-							button.btn.btn-primary-btn-lg.articleBtn(type="button", data-toggle="modal", data-target="#myModal") Read More...
+							button.btn.btn-primary-btn-lg.articleBtn.italic(type="button", data-toggle="modal", data-target="#myModal") Read More...
 					.gallery-cell.article 2
 					.gallery-cell.article 3
 			section.section.splash4
 				.header
-					h2 Cast &amp; Crew
+					h2 - Cast &amp; Crew -
 				.main-gallery.js-flickity(data-flickity-options='{ "wrapAround": true, "pageDots": true, "prevNextButtons": true }')
 					.gallery-cell.crew
 						.crewPhoto
@@ -157,17 +157,12 @@ html
 						.crewIMBD IMBD &#9656;
 			section.section.splash5
 				.header
-					h2 Social Media
-				.social-media.sm-listing
-					ul
-						li
-							img(src="img/facebook.svg")
-						li
-							img(src="img/twitter.svg")
-						li
-							img(src="img/instagram.svg")
-						li
-							img(src="img/youtube.svg")
+					h2 - Social Media -
+
+			.design
+				h5 Designed by 
+				img(src="img/rory.svg")
+
 
 		.modal.fade(id="myModal", tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
 			.modal-dialog

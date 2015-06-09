@@ -1,5 +1,8 @@
 // CREW BLOCK SASS
 
+.main-gallery
+	margin-bottom: 40px
+
 .crew
 	background-color: ($splash4bgcolor - #111)
 	height: 400px
@@ -96,17 +99,16 @@
 
 .modal-content
 	background-color: ($modalbgcolor - $modalheadermod)
-	color: white
+	color: $lightblack
 
 .modal-body
 	background-color: $modalbgcolor
-	font-weight: 300
 	font-family: lato
 	text-indent: 24px
 
 .modal-title
 	padding-bottom: 0px
-	color: ($navbasecolor + $modaltitlemod)
+	color: $lightblack
 
 .modalWrapper
 	text-align: center
@@ -131,14 +133,24 @@
 		width: 25%
 		text-align: center
 
-.sm-listing
-	right: 0
-	width: 60px
-	height: 100%
 
-	ul
-		vertical-align: middle
-		margin-top: 35vh
+// BUTTONS
 
-	li
-		display: block
+.btn, .close
+	background-color: transparent
+	border: 2px $lightblack solid
+	border-radius: 0px
+	transition: $transition
+	cursor: pointer
+
+	&:focus
+		outline: transparent
+
+	&:hover
+		color: $activecolor
+		border-color: $activecolor
+		transition: $transition
+
+.btn
+	font-weight: 600
+
