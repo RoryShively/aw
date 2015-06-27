@@ -1,32 +1,25 @@
-.logo
-	padding-top: 10vh
+nav
 	margin: 0 auto
 	vertical-align: middle
-	width: 80%
-
-	@media only screen and (max-width: 500px)
-		width: 80%
-		padding-top: 70%
+	width: 100%
+	font-family: 'Fredericka the Great', cursive
 
 	ul
 		text-align: center
-		padding-bottom: 20px
+		padding: 2px
+		background-color: $navcolor
+		border-bottom: 3px solid rgba(255,255,255,0.5)
 
 	img
 		height: 100%
 		width: 100%
 
 	li
-		font-size: 1.75em
+		font-size: 1.9em
 		text-align: center
-		margin-top: 20px
 		color: white
 		display: inline-flex
-		width: 40%
-
-		@media only screen and (max-width: 500px)
-			width: 90%
-			margin-top: 0
+		width: 24%
 
 	a
 		color: $lightblack
@@ -35,3 +28,31 @@
 		&:hover
 			color: white
 			text-decoration: none
+
+nav.nav-toggle
+	@media only screen and (max-width: 990px)
+		display: none
+
+.gradient
+	height: 30px
+	position: absolute
+	bottom: 0
+	width: 100%
+	text-align: center
+
+	// @media only screen and (max-width: 600px)
+	// 	height: 20px
+
+.blackout-header
+	min-height: 578px
+
+	@media only screen and (max-width: 600px)
+		min-height: 260px
+
+.arrow-svg
+	display: inline-block
+	cursor: pointer
+
+	@media only screen and (max-width: 600px)
+		display: none
+
