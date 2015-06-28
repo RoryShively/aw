@@ -56,22 +56,6 @@ html
 
 				.hamburglar.is-closed(id="hamburger")
 						include menuicon2.jade
-					//- .burger-icon
-					//- 	.burger-container
-					//- 		span.burger-bun-top
-					//- 		span.burger-filling
-					//- 		span.burger-bun-bot
-					//- //- svg ring containter
-					//- .burger-ring
-					//- 	svg.svg-ring
-					//- 		path.path(fill="none", stroke="#fff", stroke-miterlimit="10", stroke-width="4", d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2")
-					//- 	//- the masked path that animates the fill to the ring
-					//- svg(width="0", height="0")
-					//- 	mask(id="mask")
-					//- 		path(xmlns="http://www.w3.org/2000/svg", fill="none", stroke="#ff0000", stroke-miterlimit="10", stroke-width="4", d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4")
-					//- .path-burger
-					//- 	.animate-path
-					//- 		.path-rotation
 
 		//- END NAV
 
@@ -111,64 +95,16 @@ html
 				.header
 					h2 - Behind the Scenes -
 				.main-gallery.js-flickity(data-flickity-options='{ "cellAllign": "center", "contain": true }')
-					.gallery-cell.article
-						.articlePhoto
-							img(src="img/rehersal.jpg")
-						.articleLabel
-							.articleTitle Rehersals
-							.articleDate.italic 5/31/2015
-							.articleDescription  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi rerum qui sint reprehenderit quidem sed repudiandae accusantium accusamus totam, veritatis sapiente tempore officiis cupiditate explicabo quia est nobis exercitationem eligendi!
-							button.btn.btn-primary-btn-lg.articleBtn.italic(type="button", data-toggle="modal", data-target="#myModal") Read More...
-					.gallery-cell.article 2
-					.gallery-cell.article 3
+
+					include articles.jade
+
 			section.section.splash4(data-selector="splash4")
 				.header
 					h2 - Cast &amp; Crew -
 				.main-gallery.js-flickity(data-flickity-options='{ "wrapAround": true, "pageDots": true, "prevNextButtons": true }')
-					.gallery-cell.crew
-						.crewPhoto
-							img(src="img/angela-full.jpg")
-						.crewLabel
-							.crewName Angela Marie
-							.crewJob Producer
-							.crewJob Actress
-						.crewIMBD IMBD &#9656;
-					.gallery-cell.crew
-						.crewPhoto
-							img(src="img/stephanie-full.jpg")
-						.crewLabel
-							.crewName Stephanie
-							.crewJob Producer
-							.crewJob Actress
-						.crewIMBD IMBD &#9656;
-					.gallery-cell.crew
-						.crewPhoto
-							img(src="img/eric-full.jpg")
-						.crewLabel
-							.crewName Angela Marie
-							.crewJob Actor
-						.crewIMBD IMBD &#9656;
-					.gallery-cell.crew
-						.crewPhoto
-							img(src="img/micheal-full.jpg")
-						.crewLabel
-							.crewName Angela Marie
-							.crewJob Actor
-						.crewIMBD IMBD &#9656;
-					.gallery-cell.crew
-						.crewPhoto
-							img(src="img/cliff-full.jpg")
-						.crewLabel
-							.crewName Angela Marie
-							.crewJob Actor
-						.crewIMBD IMBD &#9656;
-					.gallery-cell.crew
-						.crewPhoto
-							img(src="img/will-full.jpg")
-						.crewLabel
-							.crewName Angela Marie
-							.crewJob Actor
-						.crewIMBD IMBD &#9656;
+					
+					include crew.jade
+
 			section.section.splash5(data-selector="splash5")
 				.header
 					h2 - Gallery -
@@ -178,45 +114,5 @@ html
 				img(src="img/rory.svg")
 
 
-		.modal.fade(id="myModal", tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
-			.modal-dialog
-				.modal-content
-					.modal-header
-						button.close(type="button", data-dismiss="modal", aria-label="Close") <span aria-hidden="true">&times;</span>
-						h4.modal-title(id="myModalLabel") Rehersals
-						.modalWrapper
-							img(src="img/rehersal.jpg")
-					.modal-body
-						div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi totam nam veniam possimus ea quibusdam accusamus voluptates, rerum quo nihil eveniet ad atque voluptate commodi repellendus ex harum molestiae fugiat.
-						</br>
-						div Numquam aperiam culpa perspiciatis animi assumenda voluptas, perferendis officiis iure, ad quaerat excepturi saepe praesentium vel, tenetur deserunt? Accusamus eligendi, fugiat expedita quis laudantium veritatis dolorum nostrum sit cum dolores.
-						</br>
-						div Qui sed, quibusdam consequatur rerum, debitis, magnam reiciendis sequi quaerat, aliquid praesentium ullam at quos commodi autem distinctio voluptatibus nostrum aspernatur totam dolore? Rem id, veritatis excepturi libero nihil fugiat.
-						</br>
-						div Impedit culpa veniam ab vel explicabo odit at, rem adipisci sapiente voluptates dolorum deserunt est corrupti nisi laudantium placeat magni doloribus quidem quasi delectus unde ex eos natus, amet. Architecto.
-						</br>
-						div Odit sint corporis quam sed eos aspernatur, et nam laborum molestias veniam! Minus, atque. Sapiente, placeat ab labore quidem vitae! Aliquid eius earum ad cupiditate nulla iusto sunt ipsa atque.
-						</br>
-						div A totam quia repellat voluptas velit quod similique rerum aliquid in, deleniti consequatur nihil eos temporibus nulla aperiam? Doloremque provident recusandae, accusamus quae quidem totam dolorem in ab eos consequuntur.
-						</br>
-						div Earum fugiat sed, ipsum sint error saepe nesciunt omnis minus deserunt mollitia, labore amet quo, delectus commodi necessitatibus iure sunt neque culpa doloremque perspiciatis soluta? Cumque reprehenderit ea ad, non.
-						</br>
-						div Maxime modi ipsam tenetur fugit commodi consequatur sunt nulla labore, repellendus laudantium autem facere consectetur blanditiis recusandae excepturi, ex in optio unde minima expedita asperiores sint obcaecati dignissimos fugiat. A.
-						</br>
-						div Explicabo assumenda consequuntur esse, quidem suscipit aspernatur ipsum harum. Dolores modi soluta optio eveniet maxime veniam reprehenderit, aut esse. Quibusdam sit rerum in eaque delectus, doloremque voluptatem consequatur sed incidunt?
-						</br>
-						div Debitis quaerat mollitia cupiditate pariatur ducimus non alias quam aliquid aspernatur, eaque distinctio, odio ea molestias culpa libero maxime itaque deleniti eos, quos beatae atque aperiam doloribus reprehenderit. Rem, consectetur!
-						</br>
-						div Fugit nulla repellendus deleniti iusto totam ut at, dolor esse minus expedita, reiciendis ullam facere quisquam odio dolores voluptates dolorem. Commodi quos obcaecati laborum ea, omnis esse quae pariatur, amet.
-						</br>
-						div Molestiae corporis ipsam, in ut harum vitae facilis voluptates eveniet, nam dignissimos reprehenderit praesentium repudiandae aliquam facere beatae incidunt sed itaque commodi voluptas animi perspiciatis placeat. Inventore iure ducimus, earum.
-						</br>
-						div Sapiente totam iure vel facere sunt libero voluptates, alias nihil tempora placeat, dolor vitae aut nobis magnam, quos illum ex saepe nesciunt, provident obcaecati ratione laudantium sint officiis vero. Ut.
-						</br>
-						div Consectetur necessitatibus at eligendi illo a obcaecati, vel porro sapiente iure. Voluptates doloremque, recusandae qui ipsa sapiente voluptatum harum deleniti voluptas vero excepturi. Omnis fuga reprehenderit, fugit aspernatur ea distinctio?
-						</br>
-					.modal-footer
-						button.btn.btn-default(type="button", data-dismiss="modal") Close
-
-
+		include modal.jade
 

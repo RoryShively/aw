@@ -1,55 +1,59 @@
 $(window).load(function() {
-	// executes when complete page is fully loaded, including all frames, objects and images
-	// var pilotdistance = $('*[data-selector="splash1"]').offset().top;
-	// alert(pilotdistance);
+
+	// ****** Fires Navigation On Anchor Click ******
 
 	$('*[data-selector="li1"]').click( function() {
-		scrollpilot();
+		scrollNav('splash2');
 	});
 
 	$('*[data-selector="li2"]').click( function() {
-		scrollscenes();
+		scrollNav('splash3');
 	});
 
 	$('*[data-selector="li3"]').click( function() {
-		scrollcrew();
+		scrollNav('splash4');
 	});
 
 	$('*[data-selector="li4"]').click( function() {
-		alert("no gellery section yet");
-		scrollgallery();
+		scrollNav('splash5');
 	});
 
-	scrollpilot = function() {
-		var pilotdistance = $('*[data-selector="splash2"]').offset().top;
+	// ****** Sets Width Of Window ******
 
-		$("body,html").animate({
-			scrollTop: (pilotdistance + 90)
-		}, 500);
-	};
+	var windowWidth = $( window ).width();
+	$( window ).resize( function() {
+		windowWidth = $( window ).width();
+		console.log( windowWidth );
+	});
 
-	scrollscenes = function() {
-		var scenesdistance = $('*[data-selector="splash3"]').offset().top;
+	// ****** Function That Controls Scroll Navigation Destination And Speed ******
+	
+	scrollNav = function(section) {
 
-		$("body,html").animate({
-			scrollTop: (scenesdistance + 90)
-		}, 500);
-	};
+		// ****** Set Dynamic Var ******
+		var sectiondistance = $('*[data-selector=' + section).offset().top;
+		if( windowWidth >= 600 ) {
+			sectiondistance = sectiondistance + 90
+		} else {
+			sectiondistance = sectiondistance + 40
+		}
+		// ****** /Set Dynamic Var ******
 
-	scrollcrew = function() {
-		var crewdistance = $('*[data-selector="splash4"]').offset().top;
+		var scroll = $( document ).scrollTop();
 
-		$("body,html").animate({
-			scrollTop: (crewdistance + 90)
-		}, 500);
-	};
+		// ****** Set Dynamic Var ******
+		var absdistance = 0;
+		if( scroll >= sectiondistance ) {
+			absdistance = ( scroll - sectiondistance );
+		} else {
+			absdistance = ( sectiondistance - scroll );
+		}
+		// ****** /Set Dynamic Var ******
 
-	scrollgallery = function() {
-		var gallerydistance = $('*[data-selector="splash5"]').offset().top;
+		var scrollspeed = ( absdistance * 0.8 );
 
-		$("body,html").animate({
-			scrollTop: (gallerydistance + 90)
-		}, 500);
+		$("body,html").animate( { scrollTop: (sectiondistance) }, scrollspeed);
+		
 	};
 
 });

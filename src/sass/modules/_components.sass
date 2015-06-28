@@ -19,13 +19,16 @@
 		color: $navfontcolor
 		font-size: 1.1em
 		font-weight: 300
+		transition: $transition
 
 		&:hover
 			background: ($navbasecolor - $navsecondarymod)
+			color: $activecolor2
 
 		&:active
 			background: ($navbasecolor + $navtitlemod)
 			color: $navbasecolor
+			transition: $transition
 			
 .cbp-spmenu-vertical
 	width: 240px
@@ -92,6 +95,12 @@
 	background: transparent
 	border: $paypalbtncolor 2px solid
 	color: $paypalbtncolor
+	transition: $transition
+
+	&:hover
+		transition: $transition
+		border-color: $activecolor
+		color: $activecolor
 
 	&:before, &:after
 		background: transparent
@@ -117,8 +126,10 @@
 	width: 68px
 	height: 68px
 	background: transparent
-	-webkit-touch-callout: none
-	user-select: none
+
+	@media only screen and (max-width: 600px)
+		transform: scale(0.8)
+		right: -60px
 
 
 // transition mask
