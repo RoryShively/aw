@@ -50,9 +50,11 @@ $(window).load(function() {
 		}
 		// ****** /Set Dynamic Var ******
 
-		var scrollspeed = ( absdistance * 0.8 );
 
-		$("body,html").animate( { scrollTop: (sectiondistance) }, scrollspeed);
+
+		var scrollspeed = ( ( absdistance * 0.5 ) - ( ( Math.pow( (absdistance / 100) , 2 ) ) ) * 0.5 );
+
+		$("body,html").animate( { scrollTop: (sectiondistance) }, scrollspeed, 'linear');
 		
 	};
 
