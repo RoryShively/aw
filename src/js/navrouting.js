@@ -52,7 +52,7 @@ $(window).load(function() {
 
 
 
-		var scrollspeed = ( ( absdistance * 0.5 ) - ( ( Math.pow( (absdistance / 100) , 2 ) ) ) * 0.5 );
+		var scrollspeed = ( ( absdistance * 0.2 ) + 300 );
 
 		$("body,html").animate( { scrollTop: (sectiondistance) }, scrollspeed, 'linear');
 		
